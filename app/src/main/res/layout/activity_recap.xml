@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2020 - UMons
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/textMargin"
+        android:layout_weight="1"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/click_logo" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sessionKeyView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:layout_gravity="end"
+                android:text="@string/session_id"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/infoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_margin="25dp"
+                    android:padding="@dimen/textMargin"
+                    android:textSize="15sp"
+                    android:text="@string/pending_reviews"
+                    android:lineSpacingExtra="6dp"
+                    android:background="#BBBBBB"
+                    android:textColor="#FFFFFF"
+                />
+
+                <ProgressBar
+                    android:id="@+id/uploading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    />
+            </FrameLayout>
+            <Button
+                android:id="@+id/syncButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sync_button"
+                android:layout_marginTop="@dimen/textMargin"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:drawableEnd="@drawable/ic_cloud_upload_black_24dp"/>
+
+            <Button
+                android:id="@+id/listReviewsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/see_all_reviews"
+                android:layout_marginTop="@dimen/textMargin"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:drawableEnd="@drawable/ic_collections_black_24dp"/>
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_button"
+                android:layout_margin="@dimen/textMargin"
+                android:drawableEnd="@drawable/ic_forward_black_24dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/loadingPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:background="#AADDDDDD"
+            android:visibility="invisible"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textMargin"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="@string/waiting_map"
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

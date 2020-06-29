@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2020 - UMons
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<resources>
+    <string name="app_name">Review App</string>
+    <string name="log_out">Log out</string>
+    <string name="log_out_message">Are you sure you want to log out?</string>
+    <string name="port_error">Port is not valid !</string>
+    <string name="empty_fields_error">Some fields are left empty !</string>
+    <string name="invalid_session_key">The session key is not valid !</string>
+    <string name="server_unreachable">The server is not reachable !</string>
+    <string name="next_button">Continue</string>
+    <string name="review_completed">Your review has been recorded in the app and will be sent to server.</string>
+    <string name="offline_title">Offline mode</string>
+    <string name="force_offline">The server is unreachable. Would you like to log in with this session key anyway?</string>
+    <string name="see_all_reviews">See all reviews</string>
+
+    <!-- Permissions denied Toast text -->
+    <string name="location_permission_denied_message">No access to locations given.</string>
+    <string name="storage_permission_denied_message">No access to external storage. Permission needed to display plans and save pictures</string>
+
+    <!-- Error messages -->
+    <string name="locate_error">You should position yourself on the map before going further !</string>
+    <string name="picture_error">You should take a picture before going further !</string>
+    <string name="score_error">You should give your feeling before going further !</string>
+    <string name="notes_error">You should give a title and a description before validate !</string>
+    <string name="upload_error">"Error for review %1$d: "</string>
+
+    <!-- Workflow buttons -->
+    <string name="next_locate_button">Take a picture</string>
+    <string name="next_picture_button">Set your mood about it</string>
+    <string name="next_score_button">Give more details</string>
+    <string name="next_notes_button">Validate your review</string>
+
+    <!-- Loading Panel -->
+    <string name="logo_description">CLICK - Creative Innovation</string>
+
+    <string name="user_name">Enter your user name&#8230;</string>
+    <string name="ip_server">Enter the server IP&#8230;</string>
+    <string name="port_server">Enter the server port&#8230;</string>
+    <string name="session_key_server">Enter the session key&#8230;</string>
+
+    <string name="config_button">Save configuration</string>
+    <string name="connect_button">Connecting to server&#8230;</string>
+
+    <!-- Recap Panel -->
+    <string name="start_button">Add a review</string>
+    <string name="start_edit_button">Continue current review</string>
+    <string name="session_id">Session Key: %1$s</string>
+    <string name="pending_reviews">%1$d pending review(s) waiting&#8230;</string>
+    <string name="error_reviews">%1$d review(s) got an error.</string>
+    <string name="sync_button">Upload reviews to server</string>
+    <string name="no_map">No floor downloaded for this session.</string>
+    <string name="waiting_map">Waiting map download&#8230;</string>
+
+    <!-- IndoorAtlas & Location Panels -->
+    <string name="alt_location">Waiting map download&#8230;</string>
+    <string name="next_desc">Next</string>
+    <string name="previous_desc">Previous</string>
+
+    <!-- Take Picture Panel -->
+    <string name="take_picture">Take another picture !</string>
+    <string name="select_picture">Select a picture from gallery</string>
+
+    <!-- Text Notes Panel -->
+    <string name="notes_title">Your review\'s title:</string>
+    <string name="notes_content">Content: </string>
+
+    <!-- Details Panel -->
+    <string name="location_desc">Location</string>
+    <string name="session_key">Session Key</string>
+    <string name="no_session_key">No session key</string>
+    <string name="complete">Complete</string>
+    <string name="incomplete">Incomplete</string>
+    <string name="sent">Sent</string>
+    <string name="error_sent">Error while sent</string>
+    <string name="not_sent">Not sent</string>
+    <string name="review_detail_title">Title</string>
+    <string name="review_detail_author">Author</string>
+    <string name="review_detail_date">Date</string>
+    <string name="emotion_desc">Emotion</string>
+    <string name="review_detail_content">Content</string>
+    <string name="review_detail_id">ID</string>
+    <string name="review_detail_session_key">Session Key</string>
+    <string name="picture_desc">Image taken</string>
+</resources>

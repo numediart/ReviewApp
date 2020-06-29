@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2020 - UMons
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_marginTop="@dimen/textMargin"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="@dimen/pictureWidth"
+            android:layout_height="@dimen/pictureHeight"
+            android:layout_marginHorizontal="@dimen/textMargin"
+            android:background="@color/image_borders"
+            android:src="@drawable/ic_image_black_24dp"
+            android:scaleType="center"
+            android:contentDescription="@string/picture_desc"
+            android:padding="@dimen/imagePadding" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/textMargin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/review_detail_title"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textSize="@dimen/titleSize"/>
+
+            <TextView
+                android:id="@+id/authorView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/review_detail_author" />
+
+            <TextView
+                android:id="@+id/dateView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/textMargin"
+                android:layout_marginStart="3dp"
+                android:textStyle="italic"
+                android:text="@string/review_detail_date" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/textMargin"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/floorNameView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/floorIdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:layout_marginBottom="5dp"
+                android:textSize="9sp"
+                android:singleLine="true"
+                android:textAlignment="center"/>
+
+            <com.numediart.reviewapp.graphics.PointerImageView
+                android:id="@+id/location"
+                android:layout_width="@dimen/locationSize"
+                android:layout_height="@dimen/locationSize"
+                android:background="@color/image_borders"
+                android:scaleType="centerInside"
+                android:padding="@dimen/imagePadding"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:contentDescription="@string/location_desc"
+                android:src="@drawable/ic_image_black_24dp" />
+        </LinearLayout>
+
+        <com.numediart.reviewapp.graphics.ColorPointerImageView
+            android:id="@+id/emotion"
+            android:layout_width="@dimen/emotionWidth"
+            android:layout_height="@dimen/emotionHeight"
+            android:background="@color/image_borders"
+            android:scaleType="centerInside"
+            android:padding="3dp"
+            android:layout_marginHorizontal="@dimen/textMargin"
+            android:contentDescription="@string/emotion_desc"
+            android:src="@drawable/emotion_graph"
+            app:bitmap_colors="@drawable/color_map"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/textMargin"
+        android:layout_marginHorizontal="@dimen/textMargin"
+        android:layout_weight="10"
+        android:text="@string/review_detail_content"
+        android:maxLines="10"
+        android:ellipsize="end"/>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/textMargin"
+    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/idView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:text="@string/review_detail_id" />
+
+            <TextView
+                android:id="@+id/sessionKeyView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:layout_weight="1"
+                android:text="@string/review_detail_session_key" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/textMargin">
+            <TextView
+                android:id="@+id/completedView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:layout_weight="1"
+                android:text="@string/incomplete" />
+
+            <TextView
+                android:id="@+id/sentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/textMargin"
+                android:layout_weight="1"
+                android:text="@string/not_sent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+// Copyright (C) 2020 - UMons
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.numediart.reviewapp"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix = "Debug"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
+
+    //https://github.com/amitshekhariitbhu/Android-Debug-Database - Apache 2.0
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.3'
+
+    //https://github.com/google/gson - Apache 2.0
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //https://github.com/AlexanderShirokih/java-android-websocket-client - Apache 2.0
+    implementation project(path: ':WebSocketClient')
+}
