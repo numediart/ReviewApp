@@ -1,5 +1,6 @@
 # ReviewApp
 Android application to generate reviews and send them to the [ReviewManager server](https://github.com/numediart/ReviewManager)
+All the documentation about both projects can be found [here](User Manual.pdf) (or with the [French Version](Manuel Utilisateur.pdf))
 
 ## License
 Copyright (c) 2020 [UMONS](https://web.umons.ac.be/en/)
